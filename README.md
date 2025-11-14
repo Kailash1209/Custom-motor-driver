@@ -8,11 +8,11 @@ The car is completely hand-assembled and tested on a breadboard, making it a gre
 
 ## 📸 Project Photo
 
-![Robotic Car](images/car_photo.jpg)
-![Serial Bluetooth Terminal ](images/Serial_Bluetooth_Termianl.jpg)
-![Circuit Diagram](images/Circuit_Diagram.jpg)
-
-
+![Robotic Car](Assets/car_photo.jpg)
+![Serial Bluetooth Terminal ](Assets/Serial_Bluetooth_Terminal.jpg)
+![Circuit Diagram](Assets/Circuit_Diagram_1.jpg)
+![Circuit Diagram 2](Assets/Circuit_Diagram_2.jpg)
+![Inverter Output Waveform](Assets/Inverter_Output_Waveform.jpg)
 
 ---
 
