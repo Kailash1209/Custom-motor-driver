@@ -1,2 +1,90 @@
-# Custom-motor-driver
-Complete custom motor driver solution featuring high-current MOSFET driver stage, gate driver support, current sensing, power filtering, and microcontroller-friendly PWM interface. Repository includes full hardware design files, bill of materials, example firmware, wiring diagrams, and test results
+# Custom Motor Driver
+
+A complete repository for a custom motor driver hardware + firmware project.  
+Includes schematics, BOM, PCB placeholders, and firmware examples for ESP32 (Arduino) and STM32 (HAL).
+
+> NOTE: This is a working template. Replace placeholder images, KiCad files, and BOM entries with your real files.
+
+---
+
+## 📌 Contents
+- Hardware design (schematic, PCB files, BOM)
+- Firmware for ESP32 (PWM + dead-time + direction) and STM32 example
+- Bench test script and wiring diagrams
+- Photos and oscilloscope captures
+
+---
+
+## 🔋 Supported features (typical for this repo)
+- MOSFET-based H-bridge or half-bridge driver
+- PWM control (up to 20 kHz typical; depends on MOSFET/driver)
+- Dead-time insertion to avoid shoot-through
+- Current sensing (shunt + amplifier / ACS712 option)
+- Over-current and thermal protection points (fuse pads, thermistor footprints)
+- Logic-level interfacing: 3.3V (ESP32 / STM32)
+- Optional gate driver footprint (IR2110 / driver IC / gate-driver isolator)
+- Connectors: power, motor, encoder inputs, UART/Serial
+
+---
+
+## 📸 Project photos
+Add your images to `/images/` then reference them here:
+
+![Board Photo](images/board_photo.jpg)
+![Schematic](images/schematic.png)
+![Waveform](images/waveform.jpg)
+
+---
+
+## 🧭 Quick start (flash + basic wiring)
+1. Power OFF. Connect motor to `MOTOR+` / `MOTOR-`.  
+2. Connect DC supply to `V+` and `GND` (observe polarity). Use appropriate fuse.  
+3. Connect control MCU (ESP32/STM32) 3.3V, GND, and PWM pins to `CTRL_PWM_A` / `CTRL_PWM_B`.  
+4. Verify gate-driver power rails (if using isolated gate drivers).  
+5. Upload firmware from `/firmware/arduino/` or `/firmware/stm32/`.  
+6. Power ON the board and run bench tests at low duty to confirm direction and response.
+
+---
+
+## ⚠️ Safety & warnings
+- This hardware deals with high currents and potentially high voltages. Wear eye protection.  
+- Always test with a current-limited source or series resistor for first-power-up.  
+- Use proper heatsinking for MOSFETs and place fuses on supply.  
+- Double-check MOSFET orientation and gate resistors before applying power.
+
+---
+
+## 🗂 Files of interest
+- `hardware/BOM.csv` — bill of materials
+- `hardware/kicad/` — KiCad project (placeholder)
+- `firmware/arduino/MotorDriver_ESP32_PWM/` — ESP32 example
+- `firmware/stm32/MotorDriver_STM32_HAL/` — STM32 example
+
+---
+
+## 🧰 Recommended components (example)
+- MOSFETs: IRF3205 / IRLZ44N / AOD4184 (choose by voltage/current)
+- Gate driver: IR2110 / TC4427 / IRS2003
+- Current sense: 50 mΩ shunt + INA219 / INA826 or ACS712 (hall)
+- MCU: ESP32 dev board / STM32F103 (BluePill)
+- Capacitors: low-ESR electrolytic + ceramic decoupling
+
+---
+
+## 📜 License
+MIT — see [LICENSE](LICENSE)
+
+---
+
+## 🤝 Contributing
+See `CONTRIBUTING.md` for guidelines.
+
+---
+
+If you want, I can:
+- Produce KiCad schematic & PCB files from your schematic photo
+- Generate a printable BOM (PDF)
+- Create a polished README banner image
+- Produce a short YouTube video script/description
+
+Tell me which one you want next.
