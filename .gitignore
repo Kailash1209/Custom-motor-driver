@@ -8,9 +8,3 @@ build/
 *.log
 *.cache
 *.bak
-
-# KiCad
-*.kicad_pcb-bak
-*.bak
-*.log
-__pycache__/
