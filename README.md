@@ -28,7 +28,7 @@ Includes schematics, BOM, and firmware examples for ESP32 (Arduino).
 ## 📸 Project photos
 Add your images to `/images/` then reference them here:
 
-![Board Photo](images/board_photo.jpg)
+![Car Photo](images/Car_photo.jpg)
 ![Schematic](images/schematic.png)
 ![Waveform](images/waveform.jpg)
 
